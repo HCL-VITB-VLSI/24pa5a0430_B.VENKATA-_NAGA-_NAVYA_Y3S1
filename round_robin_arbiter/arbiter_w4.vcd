@@ -1,0 +1,739 @@
+$date
+  2026-06-08T16:14:39.954Z
+$end
+$version
+  NodeJS Arbiter Simulator
+$end
+$timescale
+  1ns
+$end
+$scope module tb $end
+$var reg 1 c clk $end
+$var reg 1 r rst_n $end
+$var reg 4 q req $end
+$var wire 4 g grant $end
+$var wire 1 v grant_valid $end
+$var reg 2 p ptr $end
+$upscope $end
+$enddefinitions $end
+#0
+0c
+0r
+b0000 q
+b0000 g
+0v
+b00 p
+#10
+1c
+0r
+b0000 q
+b0000 g
+0v
+b00 p
+#20
+0c
+0r
+b0000 q
+b0000 g
+0v
+b00 p
+#30
+1c
+0r
+b0000 q
+b0000 g
+0v
+b00 p
+#40
+0c
+1r
+b0000 q
+b0000 g
+0v
+b00 p
+#50
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#60
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#70
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#80
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#90
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#100
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#110
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#120
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#130
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#140
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#150
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#160
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#170
+1c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#180
+0c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#190
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#200
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#210
+1c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#220
+0c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#230
+1c
+1r
+b0000 q
+b0000 g
+0v
+b10 p
+#240
+0c
+1r
+b0000 q
+b0000 g
+0v
+b10 p
+#250
+1c
+1r
+b1111 q
+b0100 g
+1v
+b11 p
+#260
+0c
+1r
+b1111 q
+b0100 g
+1v
+b11 p
+#270
+1c
+1r
+b1111 q
+b1000 g
+1v
+b00 p
+#280
+0c
+1r
+b1111 q
+b1000 g
+1v
+b00 p
+#290
+1c
+1r
+b1111 q
+b0001 g
+1v
+b01 p
+#300
+0c
+1r
+b1111 q
+b0001 g
+1v
+b01 p
+#310
+1c
+1r
+b1111 q
+b0010 g
+1v
+b10 p
+#320
+0c
+1r
+b1111 q
+b0010 g
+1v
+b10 p
+#330
+1c
+1r
+b1111 q
+b0100 g
+1v
+b11 p
+#340
+0c
+1r
+b1111 q
+b0100 g
+1v
+b11 p
+#350
+1c
+1r
+b1111 q
+b1000 g
+1v
+b00 p
+#360
+0c
+1r
+b1111 q
+b1000 g
+1v
+b00 p
+#370
+1c
+1r
+b1111 q
+b0001 g
+1v
+b01 p
+#380
+0c
+1r
+b1111 q
+b0001 g
+1v
+b01 p
+#390
+1c
+1r
+b1111 q
+b0010 g
+1v
+b10 p
+#400
+0c
+1r
+b1111 q
+b0010 g
+1v
+b10 p
+#410
+1c
+1r
+b0000 q
+b0000 g
+0v
+b10 p
+#420
+0c
+1r
+b0000 q
+b0000 g
+0v
+b10 p
+#430
+1c
+1r
+b0011 q
+b0001 g
+1v
+b01 p
+#440
+0c
+1r
+b0011 q
+b0001 g
+1v
+b01 p
+#450
+1c
+1r
+b0110 q
+b0010 g
+1v
+b10 p
+#460
+0c
+1r
+b0110 q
+b0010 g
+1v
+b10 p
+#470
+1c
+1r
+b0110 q
+b0100 g
+1v
+b11 p
+#480
+0c
+1r
+b0110 q
+b0100 g
+1v
+b11 p
+#490
+1c
+1r
+b0011 q
+b0001 g
+1v
+b01 p
+#500
+0c
+1r
+b0011 q
+b0001 g
+1v
+b01 p
+#510
+1c
+1r
+b0100 q
+b0100 g
+1v
+b11 p
+#520
+0c
+1r
+b0100 q
+b0100 g
+1v
+b11 p
+#530
+1c
+1r
+b0110 q
+b0010 g
+1v
+b10 p
+#540
+0c
+1r
+b0110 q
+b0010 g
+1v
+b10 p
+#550
+1c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#560
+0c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#570
+1c
+1r
+b0111 q
+b0100 g
+1v
+b11 p
+#580
+0c
+1r
+b0111 q
+b0100 g
+1v
+b11 p
+#590
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#600
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#610
+1c
+1r
+b1000 q
+b1000 g
+1v
+b00 p
+#620
+0c
+1r
+b1000 q
+b1000 g
+1v
+b00 p
+#630
+1c
+1r
+b0110 q
+b0010 g
+1v
+b10 p
+#640
+0c
+1r
+b0110 q
+b0010 g
+1v
+b10 p
+#650
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#660
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#670
+1c
+1r
+b0111 q
+b0010 g
+1v
+b10 p
+#680
+0c
+1r
+b0111 q
+b0010 g
+1v
+b10 p
+#690
+1c
+1r
+b1111 q
+b0100 g
+1v
+b11 p
+#700
+0c
+1r
+b1111 q
+b0100 g
+1v
+b11 p
+#710
+1c
+1r
+b1000 q
+b1000 g
+1v
+b00 p
+#720
+0c
+1r
+b1000 q
+b1000 g
+1v
+b00 p
+#730
+1c
+1r
+b1101 q
+b0001 g
+1v
+b01 p
+#740
+0c
+1r
+b1101 q
+b0001 g
+1v
+b01 p
+#750
+1c
+1r
+b1001 q
+b1000 g
+1v
+b00 p
+#760
+0c
+1r
+b1001 q
+b1000 g
+1v
+b00 p
+#770
+1c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#780
+0c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#790
+1c
+1r
+b0000 q
+b0000 g
+0v
+b10 p
+#800
+0c
+1r
+b0000 q
+b0000 g
+0v
+b10 p
+#810
+1c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#820
+0c
+1r
+b0001 q
+b0001 g
+1v
+b01 p
+#830
+1c
+1r
+b1000 q
+b1000 g
+1v
+b00 p
+#840
+0c
+1r
+b1000 q
+b1000 g
+1v
+b00 p
+#850
+1c
+1r
+b1101 q
+b0001 g
+1v
+b01 p
+#860
+0c
+1r
+b1101 q
+b0001 g
+1v
+b01 p
+#870
+1c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#880
+0c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#890
+1c
+1r
+b0101 q
+b0100 g
+1v
+b11 p
+#900
+0c
+1r
+b0101 q
+b0100 g
+1v
+b11 p
+#910
+1c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#920
+0c
+1r
+b0010 q
+b0010 g
+1v
+b10 p
+#930
+1c
+1r
+b1110 q
+b0100 g
+1v
+b11 p
+#940
+0c
+1r
+b1110 q
+b0100 g
+1v
+b11 p
+#950
+1c
+1r
+b0111 q
+b0001 g
+1v
+b01 p
+#960
+0c
+1r
+b0111 q
+b0001 g
+1v
+b01 p
+#970
+1c
+1r
+b0100 q
+b0100 g
+1v
+b11 p
+#980
+0c
+1r
+b0100 q
+b0100 g
+1v
+b11 p
+#990
+1c
+1r
+b0111 q
+b0001 g
+1v
+b01 p
+#1000
+0c
+1r
+b0111 q
+b0001 g
+1v
+b01 p
+#1010
+1c
+1r
+b1101 q
+b0100 g
+1v
+b11 p
+#1020
+0c
+1r
+b1101 q
+b0100 g
+1v
+b11 p

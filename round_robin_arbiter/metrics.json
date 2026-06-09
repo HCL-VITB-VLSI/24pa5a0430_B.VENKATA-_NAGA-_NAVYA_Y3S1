@@ -1,0 +1,23 @@
+{
+  "4": {
+    "width": 4,
+    "ff_count": 2,
+    "comb_gates": 44,
+    "total_area": 75.17,
+    "comments": "Baseline design, extremely fast, 2-bit binary pointer."
+  },
+  "8": {
+    "width": 8,
+    "ff_count": 3,
+    "comb_gates": 99,
+    "total_area": 160.76,
+    "comments": "Area scales linearly with width due to double priority encoders."
+  },
+  "16": {
+    "width": 16,
+    "ff_count": 4,
+    "comb_gates": 211,
+    "total_area": 329.44,
+    "comments": "Combinational logic grows at O(N) due to parallel encoders."
+  }
+}

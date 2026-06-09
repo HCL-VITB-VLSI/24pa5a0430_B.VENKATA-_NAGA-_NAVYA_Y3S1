@@ -1,0 +1,138 @@
+﻿VCD info: dumpfile tb_round_robin_arbiter.vcd opened for output.
+==================================================
+Starting Round-Robin Arbiter Testbench (WIDTH = 4)
+==================================================
+Cycle Check | Time: 12000 ps | rst_n=0 | req=0000 | uut.ptr=x | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+Cycle Check | Time: 32000 ps | rst_n=0 | req=0000 | uut.ptr=0 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+Cycle Check | Time: 52000 ps | rst_n=1 | req=0000 | uut.ptr=0 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+[TEST] Case 1: Single Requester (req[0] = 1)
+Cycle Check | Time: 72000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 92000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 112000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 132000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 152000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+[TEST] Case 2: Two Alternating Requesters
+Cycle Check | Time: 172000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 192000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 212000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 232000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 252000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 272000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+[TEST] Case 3: All Requesters Active
+Cycle Check | Time: 292000 ps | rst_n=1 | req=1111 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 312000 ps | rst_n=1 | req=1111 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 332000 ps | rst_n=1 | req=1111 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 352000 ps | rst_n=1 | req=1111 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 372000 ps | rst_n=1 | req=1111 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 392000 ps | rst_n=1 | req=1111 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 412000 ps | rst_n=1 | req=1111 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 432000 ps | rst_n=1 | req=1111 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+[TEST] Case 4: Random Request Patterns
+Cycle Check | Time: 452000 ps | rst_n=1 | req=0100 | uut.ptr=3 | grant_next=0100 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 472000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 492000 ps | rst_n=1 | req=1001 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 512000 ps | rst_n=1 | req=0011 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 532000 ps | rst_n=1 | req=1101 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 552000 ps | rst_n=1 | req=1101 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 572000 ps | rst_n=1 | req=0101 | uut.ptr=1 | grant_next=0100 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 592000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 612000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 632000 ps | rst_n=1 | req=1101 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 652000 ps | rst_n=1 | req=0110 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 672000 ps | rst_n=1 | req=1101 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 692000 ps | rst_n=1 | req=1101 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 712000 ps | rst_n=1 | req=1100 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 732000 ps | rst_n=1 | req=1001 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 752000 ps | rst_n=1 | req=0110 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 772000 ps | rst_n=1 | req=0101 | uut.ptr=3 | grant_next=0001 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 792000 ps | rst_n=1 | req=1010 | uut.ptr=0 | grant_next=0010 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 812000 ps | rst_n=1 | req=0101 | uut.ptr=1 | grant_next=0100 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 832000 ps | rst_n=1 | req=0111 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 852000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 872000 ps | rst_n=1 | req=1111 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 892000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 912000 ps | rst_n=1 | req=1110 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 932000 ps | rst_n=1 | req=1000 | uut.ptr=0 | grant_next=1000 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 952000 ps | rst_n=1 | req=0101 | uut.ptr=1 | grant_next=0100 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 972000 ps | rst_n=1 | req=1100 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 992000 ps | rst_n=1 | req=1101 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1012000 ps | rst_n=1 | req=1101 | uut.ptr=1 | grant_next=0100 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1032000 ps | rst_n=1 | req=0101 | uut.ptr=3 | grant_next=0001 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1052000 ps | rst_n=1 | req=0011 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1072000 ps | rst_n=1 | req=1010 | uut.ptr=2 | grant_next=1000 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1092000 ps | rst_n=1 | req=0000 | uut.ptr=2 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+Cycle Check | Time: 1112000 ps | rst_n=1 | req=0000 | uut.ptr=2 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+Cycle Check | Time: 1132000 ps | rst_n=1 | req=1010 | uut.ptr=0 | grant_next=0010 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1152000 ps | rst_n=1 | req=1101 | uut.ptr=1 | grant_next=0100 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1172000 ps | rst_n=1 | req=0110 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1192000 ps | rst_n=1 | req=0011 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1212000 ps | rst_n=1 | req=1101 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1232000 ps | rst_n=1 | req=0011 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1252000 ps | rst_n=1 | req=1011 | uut.ptr=2 | grant_next=1000 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1272000 ps | rst_n=1 | req=0101 | uut.ptr=3 | grant_next=0001 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1292000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1312000 ps | rst_n=1 | req=1110 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1332000 ps | rst_n=1 | req=1101 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1352000 ps | rst_n=1 | req=1111 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1372000 ps | rst_n=1 | req=0011 | uut.ptr=2 | grant_next=0001 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1392000 ps | rst_n=1 | req=1010 | uut.ptr=0 | grant_next=0010 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1412000 ps | rst_n=1 | req=1010 | uut.ptr=2 | grant_next=1000 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1432000 ps | rst_n=1 | req=1100 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1452000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1472000 ps | rst_n=1 | req=1010 | uut.ptr=0 | grant_next=0010 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1492000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1512000 ps | rst_n=1 | req=1000 | uut.ptr=0 | grant_next=1000 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1532000 ps | rst_n=1 | req=1000 | uut.ptr=0 | grant_next=1000 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1552000 ps | rst_n=1 | req=1001 | uut.ptr=1 | grant_next=1000 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1572000 ps | rst_n=1 | req=1011 | uut.ptr=2 | grant_next=1000 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1592000 ps | rst_n=1 | req=0110 | uut.ptr=3 | grant_next=0010 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1612000 ps | rst_n=1 | req=0110 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1632000 ps | rst_n=1 | req=1110 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1652000 ps | rst_n=1 | req=1100 | uut.ptr=0 | grant_next=0100 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1672000 ps | rst_n=1 | req=1010 | uut.ptr=2 | grant_next=1000 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1692000 ps | rst_n=1 | req=1011 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1712000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1732000 ps | rst_n=1 | req=0101 | uut.ptr=3 | grant_next=0001 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1752000 ps | rst_n=1 | req=1111 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1772000 ps | rst_n=1 | req=1011 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1792000 ps | rst_n=1 | req=1010 | uut.ptr=2 | grant_next=1000 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1812000 ps | rst_n=1 | req=1110 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1832000 ps | rst_n=1 | req=0101 | uut.ptr=1 | grant_next=0100 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1852000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1872000 ps | rst_n=1 | req=1001 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1892000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 1912000 ps | rst_n=1 | req=1100 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 1932000 ps | rst_n=1 | req=1111 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1952000 ps | rst_n=1 | req=1111 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 1972000 ps | rst_n=1 | req=1000 | uut.ptr=0 | grant_next=1000 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 1992000 ps | rst_n=1 | req=0111 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 2012000 ps | rst_n=1 | req=1111 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 2032000 ps | rst_n=1 | req=1100 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 2052000 ps | rst_n=1 | req=1011 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 2072000 ps | rst_n=1 | req=1001 | uut.ptr=1 | grant_next=1000 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 2092000 ps | rst_n=1 | req=1001 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 2112000 ps | rst_n=1 | req=0000 | uut.ptr=0 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+Cycle Check | Time: 2132000 ps | rst_n=1 | req=0111 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 2152000 ps | rst_n=1 | req=0001 | uut.ptr=1 | grant_next=0001 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 2172000 ps | rst_n=1 | req=0110 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 2192000 ps | rst_n=1 | req=1100 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 2212000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 2232000 ps | rst_n=1 | req=1000 | uut.ptr=0 | grant_next=1000 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 2252000 ps | rst_n=1 | req=0111 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 2272000 ps | rst_n=1 | req=1101 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 2292000 ps | rst_n=1 | req=0010 | uut.ptr=2 | grant_next=0010 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 2312000 ps | rst_n=1 | req=1110 | uut.ptr=3 | grant_next=1000 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 2332000 ps | rst_n=1 | req=1101 | uut.ptr=0 | grant_next=0001 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 2352000 ps | rst_n=1 | req=1001 | uut.ptr=1 | grant_next=1000 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 2372000 ps | rst_n=1 | req=1111 | uut.ptr=2 | grant_next=0100 | uut.grant=0010 | uut.grant_valid=1
+Cycle Check | Time: 2392000 ps | rst_n=1 | req=0011 | uut.ptr=1 | grant_next=0010 | uut.grant=0001 | uut.grant_valid=1
+Cycle Check | Time: 2412000 ps | rst_n=1 | req=0101 | uut.ptr=3 | grant_next=0001 | uut.grant=0100 | uut.grant_valid=1
+Cycle Check | Time: 2432000 ps | rst_n=1 | req=1000 | uut.ptr=0 | grant_next=1000 | uut.grant=1000 | uut.grant_valid=1
+Cycle Check | Time: 2452000 ps | rst_n=1 | req=0000 | uut.ptr=0 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+Cycle Check | Time: 2472000 ps | rst_n=1 | req=0000 | uut.ptr=0 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+Cycle Check | Time: 2492000 ps | rst_n=1 | req=0000 | uut.ptr=0 | grant_next=0000 | uut.grant=0000 | uut.grant_valid=0
+==================================================
+Simulation finished. Total Checks: 122
+STATUS: PASSED (0 mismatches detected)
+==================================================
+tb_round_robin_arbiter.v:187: $finish called at 2500000 (1ps)
