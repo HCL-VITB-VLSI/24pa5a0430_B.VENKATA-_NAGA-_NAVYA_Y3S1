@@ -1,0 +1,113 @@
+// =============================================================
+//  Parameterized Round-Robin Arbiter
+//  Experiment 2 — Fairness Engine
+//
+//  Parameters:
+//    WIDTH — number of request/grant lines (default 4)
+//             Tested with WIDTH = 4, 8, 16
+//
+//  Interface:
+//    clk      — system clock (rising-edge triggered)
+//    rst_n    — active-low synchronous reset
+//    req      — request vector [WIDTH-1:0]
+//    grant    — one-hot grant output [WIDTH-1:0]
+//    grant_valid — high when any grant is issued
+// =============================================================
+
+module rr_arbiter #(
+    parameter integer WIDTH = 4
+) (
+    input  wire             clk,
+    input  wire             rst_n,
+    input  wire [WIDTH-1:0] req,
+    output reg  [WIDTH-1:0] grant,
+    output wire             grant_valid
+);
+
+    // -------------------------------------------------------
+    // Internal: binary pointer (0 to WIDTH-1)
+    // -------------------------------------------------------
+    localparam PTR_W = $clog2(WIDTH);
+
+    reg [PTR_W-1:0] ptr;          // priority pointer
+
+    // -------------------------------------------------------
+    // Combinational grant logic
+    //
+    // Strategy: double-width priority encoder trick
+    //   1. Replicate req to 2*WIDTH bits: {req, req}
+    //   2. Mask lower copy from ptr upward (keep [ptr + WIDTH-1 : ptr])
+    //   3. First-one detect on the masked window
+    //   4. Fold back to WIDTH bits
+    //
+    // This avoids barrel-shifter synthesis issues.
+    // -------------------------------------------------------
+    wire [2*WIDTH-1:0] req2     = {req, req};          // doubled
+    wire [2*WIDTH-1:0] mask;                            // bits enabled starting at ptr
+
+    // mask[i] = 1 when i is in the window [ptr, ptr+WIDTH-1]
+    genvar gi;
+    generate
+        for (gi = 0; gi < 2*WIDTH; gi = gi + 1) begin : gen_mask
+            assign mask[gi] = (gi >= ptr) && (gi < (ptr + WIDTH));
+        end
+    endgenerate
+
+    wire [2*WIDTH-1:0] req_masked = req2 & mask;
+
+    // First-one (priority) detection on the 2*WIDTH masked vector
+    // grant2[i] = req_masked[i] & ~(req_masked[i-1] | ... | req_masked[0])
+    wire [2*WIDTH-1:0] grant2;
+    assign grant2[0] = req_masked[0];
+    genvar gj;
+    generate
+        for (gj = 1; gj < 2*WIDTH; gj = gj + 1) begin : gen_firstone
+            assign grant2[gj] = req_masked[gj] & ~(|req_masked[gj-1:0]);
+        end
+    endgenerate
+
+    // Fold 2*WIDTH back to WIDTH (OR the two halves)
+    wire [WIDTH-1:0] grant_comb;
+    generate
+        for (gi = 0; gi < WIDTH; gi = gi + 1) begin : gen_fold
+            assign grant_comb[gi] = grant2[gi] | grant2[gi + WIDTH];
+        end
+    endgenerate
+
+    // -------------------------------------------------------
+    // Sequential: register grant, advance pointer
+    // -------------------------------------------------------
+    wire             any_req = |req;
+    wire [PTR_W-1:0] granted_idx;
+
+    // Convert one-hot grant_comb to binary index
+    // (only valid when any_req; safe because grant_comb is 0 otherwise)
+    integer k;
+    reg [PTR_W-1:0] granted_idx_r;
+    always @(*) begin
+        granted_idx_r = {PTR_W{1'b0}};
+        for (k = 0; k < WIDTH; k = k + 1) begin
+            if (grant_comb[k]) granted_idx_r = k[PTR_W-1:0];
+        end
+    end
+    assign granted_idx = granted_idx_r;
+
+    // Registered outputs and pointer
+    always @(posedge clk) begin
+        if (!rst_n) begin
+            ptr         <= {PTR_W{1'b0}};
+            grant       <= {WIDTH{1'b0}};
+        end else begin
+            grant <= grant_comb;
+            if (any_req) begin
+                // Advance to (granted_index + 1) mod WIDTH
+                ptr <= (granted_idx == WIDTH-1) ? {PTR_W{1'b0}}
+                                                : granted_idx + 1'b1;
+            end
+            // ptr holds when no requests are active
+        end
+    end
+
+    assign grant_valid = |grant;
+
+endmodule
